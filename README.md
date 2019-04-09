@@ -1,2 +1,21 @@
 # Fast-Pytorch
-Pytorch Tutorial, Pytorch with Google Colab, Pytorch Implementations: CNN, LSTM, GRU, DCGAN, Pytorch Sample Codes
+
+## Table of Contents:
+- Pytorch Tutorial
+  - What is Pytorch?
+  - Pytorch Dynamic Graph
+  - Pytorch PlayGround
+- Pytorch with Google Colab
+  - Using Drive
+  - Transfer from Github to Colab
+- Pytorch Implementations
+  - MLP
+  - CNN, 
+  - LSTM, 
+  - GRU,
+  - Transfer Learning
+  - DCGAN, 
+- Pytorch Sample Codes
+  - CycleGAN,
+  
+  
