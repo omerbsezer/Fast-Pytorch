@@ -18,9 +18,11 @@
   - DCGAN, 
   - ChatBot
 - Pytorch Sample Codes
-  - CycleGAN [github](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-  - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [github](https://github.com/jayleicn/animeGAN)
-  - wiseodd/generative-models, both pytorch and tensorflow [github](https://github.com/wiseodd/generative-models)
-  - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [github](https://github.com/znxlwm/pytorch-generative-model-collections)
+  - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
+  - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
+  - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
+  - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [[github]](https://github.com/znxlwm/pytorch-generative-model-collections)
+  - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
+  - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
   
   
