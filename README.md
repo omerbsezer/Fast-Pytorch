@@ -1,6 +1,6 @@
 # Fast-Pytorch
 
-This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab.
+This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
 
 ## Table of Contents:
 - Pytorch Tutorial
@@ -30,23 +30,45 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
   
 ## Pytorch Tutorial
 
-### What is Pytorch (torch)?
-It's python deep learning framework/library that is developed by Facebook. 
+It's python deep learning framework/library that is developed by Facebook. Pytorch has own datastructure that provides automatic differentiation for all operations on Tensors. 
  - [What is Pytorch?](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
-Pytorch has own datastructure that provides automatic differentiation for all operations on Tensors. 
  - [Autograd: Automatic Differentiation](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py)
  
-Important keys: torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
+**Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 - Pytorch Playground: [Notebook]
 
-Neural Nettwork (nn):
-
-Optimizer:
-
-Loss:
-
-Basic two layer feed forward neural networks with optimizer, loss:
+**Model (Neural Network,nn):**
+```Python
 ```
+**Optimizer:**  [Details](https://pytorch.org/docs/stable/optim.html)
+```Python
+torch.optim.Adadelta(params, lr=1.0, rho=0.9, eps=1e-06, weight_decay=0)
+torch.optim.Adagrad(params, lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
+torch.optim.Adam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
+torch.optim.SparseAdam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08)
+torch.optim.Adamax(params, lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)
+torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight_decay=0)
+torch.optim.LBFGS(params, lr=1, max_iter=20, max_eval=None, tolerance_grad=1e-05, tolerance_change=1e-09, history_size=100, line_search_fn=None)
+torch.optim.RMSprop(params, lr=0.01, alpha=0.99, eps=1e-08, weight_decay=0, momentum=0, centered=False)
+torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))
+torch.optim.SGD(params, lr=<required parameter>, momentum=0, dampening=0, weight_decay=0, nesterov=False) # stochastic gradient descent
+torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda, last_epoch=-1)
+torch.optim.lr_scheduler.StepLR(optimizer, step_size, gamma=0.1, last_epoch=-1)
+```
+**Loss:** [Details](https://pytorch.org/docs/stable/nn.html)
+```Python
+torch.nn.L1Loss(size_average=None, reduce=None, reduction='mean') # L1 Loss
+torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean') # Mean square error loss
+torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction='mean')
+torch.nn.CTCLoss(blank=0, reduction='mean') #Connectionist Temporal Classification loss
+torch.nn.NLLLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction='mean') #negative log likelihood loss
+torch.nn.PoissonNLLLoss(log_input=True, full=False, size_average=None, eps=1e-08, reduce=None, reduction='mean')
+torch.nn.KLDivLoss(size_average=None, reduce=None, reduction='mean') # Kullback-Leibler divergence Loss
+torch.nn.BCELoss(weight=None, size_average=None, reduce=None, reduction='mean') # Binary Cross Entropy
+torch.nn.MarginRankingLoss(margin=0.0, size_average=None, reduce=None, reduction='mean')
+```
+**Basic two layer feed forward neural networks with optimizer, loss:**
+```Python
 import torch
 class TwoLayerNet(torch.nn.Module):
     def __init__(self, D_in, H, D_out):
