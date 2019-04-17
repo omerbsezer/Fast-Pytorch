@@ -4,22 +4,8 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 
 ## Table of Contents:
 - Pytorch Tutorial
-  - What is Pytorch?
-  - Pytorch Dynamic Graph
-  - Pytorch PlayGround
-  - Pytorch Cheatsheet
 - Pytorch with Google Colab
-  - Using Drive
-  - Transfer from Github to Colab
 - Pytorch Example Implementations
-  - MLP (classification)
-  - MLP (regression)
-  - CNN, 
-  - LSTM, 
-  - GRU,
-  - Transfer Learning
-  - DCGAN, 
-  - ChatBot
 - Pytorch Sample Codes
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
   - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
@@ -33,6 +19,7 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 It's python deep learning framework/library that is developed by Facebook. Pytorch has own datastructure that provides automatic differentiation for all operations on Tensors. 
  - [What is Pytorch?](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
  - [Autograd: Automatic Differentiation](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html#sphx-glr-beginner-blitz-autograd-tutorial-py)
+ - [Details - Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
  
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 - Pytorch Playground: [Notebook]
@@ -55,7 +42,7 @@ torch.optim.SGD(params, lr=<required parameter>, momentum=0, dampening=0, weight
 torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda, last_epoch=-1)
 torch.optim.lr_scheduler.StepLR(optimizer, step_size, gamma=0.1, last_epoch=-1)
 ```
-**Loss:** [Details](https://pytorch.org/docs/stable/nn.html)
+**Loss Functions:** [Details](https://pytorch.org/docs/stable/nn.html#loss-functions)
 ```Python
 torch.nn.L1Loss(size_average=None, reduce=None, reduction='mean') # L1 Loss
 torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean') # Mean square error loss
@@ -66,6 +53,12 @@ torch.nn.PoissonNLLLoss(log_input=True, full=False, size_average=None, eps=1e-08
 torch.nn.KLDivLoss(size_average=None, reduce=None, reduction='mean') # Kullback-Leibler divergence Loss
 torch.nn.BCELoss(weight=None, size_average=None, reduce=None, reduction='mean') # Binary Cross Entropy
 torch.nn.MarginRankingLoss(margin=0.0, size_average=None, reduce=None, reduction='mean')
+```
+**Pooling Layers:** [Details](https://pytorch.org/docs/stable/nn.html#pooling-layers)
+```Python
+```
+**Non-linear activation functions:** [Details](https://pytorch.org/docs/stable/nn.html#non-linear-activation-functions)
+```Python
 ```
 **Basic two layer feed forward neural networks with optimizer, loss:**
 ```Python
@@ -105,3 +98,24 @@ for t in range(epoch):
   ## Pytorch Dynamic Graph
   ## Pytorch PlayGround
   ## Pytorch Cheatsheet
+  
+- Pytorch with Google Colab
+- Using Drive
+- Transfer from Github to Colab
+  
+- Pytorch Example Implementations
+- MLP (classification)
+- MLP (regression)
+- CNN, 
+- LSTM, 
+- GRU,
+- Transfer Learning
+- DCGAN, 
+- ChatBot
+- Pytorch Sample Codes
+  - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
+  - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
+  - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
+  - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [[github]](https://github.com/znxlwm/pytorch-generative-model-collections)
+  - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
+  - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
