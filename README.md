@@ -3,7 +3,8 @@
 This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
 
 ## Table of Contents:
-- Pytorch Tutorial
+- Fast Pytorch Tutorial
+- Fast Torchvision Tutorial
 - Pytorch with Google Colab
 - Pytorch Example Implementations
 - Pytorch Sample Codes
@@ -14,7 +15,7 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
   - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
   - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
   
-## Pytorch Tutorial
+## Fast Pytorch Tutorial
 
 It's python deep learning framework/library that is developed by Facebook. Pytorch has own datastructure that provides automatic differentiation for all operations on Tensors. 
  - [What is Pytorch?](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
@@ -24,8 +25,24 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 - Pytorch Playground: [Notebook]
 
-**Model (Neural Network,nn):**
+**Model (Neural Network Layers:** [Details](https://pytorch.org/docs/stable/nn.html)
 ```Python
+torch.nn.RNN(*args, **kwargs)
+torch.nn.LSTM(*args, **kwargs)
+torch.nn.GRU(*args, **kwargs)
+torch.nn.RNNCell(input_size, hidden_size, bias=True, nonlinearity='tanh')
+torch.nn.LSTMCell(input_size, hidden_size, bias=True)
+torch.nn.GRUCell(input_size, hidden_size, bias=True)
+torch.nn.Linear(in_features, out_features, bias=True)
+torch.nn.Bilinear(in1_features, in2_features, out_features, bias=True)
+torch.nn.Conv1d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)
+torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)
+torch.nn.Conv3d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)
+torch.nn.ConvTranspose1d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)
+torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)
+torch.nn.ConvTranspose3d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)
+torch.nn.Unfold(kernel_size, dilation=1, padding=0, stride=1)
+torch.nn.Fold(output_size, kernel_size, dilation=1, padding=0, stride=1)
 ```
 **Optimizer:**  [Details](https://pytorch.org/docs/stable/optim.html)
 ```Python
@@ -56,9 +73,34 @@ torch.nn.MarginRankingLoss(margin=0.0, size_average=None, reduce=None, reduction
 ```
 **Pooling Layers:** [Details](https://pytorch.org/docs/stable/nn.html#pooling-layers)
 ```Python
+torch.nn.MaxPool1d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)
+torch.nn.MaxPool2d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)
+torch.nn.MaxPool3d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)
+torch.nn.MaxUnpool2d(kernel_size, stride=None, padding=0) # Computes a partial inverse of MaxPool2d
+torch.nn.AvgPool2d(kernel_size, stride=None, padding=0, ceil_mode=False, count_include_pad=True)
+torch.nn.FractionalMaxPool2d(kernel_size, output_size=None, output_ratio=None, return_indices=False, _random_samples=None)
+torch.nn.LPPool2d(norm_type, kernel_size, stride=None, ceil_mode=False) # 2D power-average pooling 
+torch.nn.AdaptiveMaxPool2d(output_size, return_indices=False)
+torch.nn.AdaptiveAvgPool2d(output_size)
 ```
 **Non-linear activation functions:** [Details](https://pytorch.org/docs/stable/nn.html#non-linear-activation-functions)
 ```Python
+torch.nn.ELU(alpha=1.0, inplace=False) #  the element-wise function
+torch.nn.Hardshrink(lambd=0.5) #  hard shrinkage function element-wise
+torch.nn.LeakyReLU(negative_slope=0.01, inplace=False)
+torch.nn.PReLU(num_parameters=1, init=0.25)
+torch.nn.ReLU(inplace=False)
+torch.nn.RReLU(lower=0.125, upper=0.3333333333333333, inplace=False) # randomized leaky rectified liner unit function
+torch.nn.SELU(inplace=False)
+torch.nn.CELU(alpha=1.0, inplace=False)
+torch.nn.Sigmoid()
+torch.nn.Softplus(beta=1, threshold=20)
+torch.nn.Softshrink(lambd=0.5)
+torch.nn.Tanh()
+torch.nn.Tanhshrink()
+torch.nn.Threshold(threshold, value, inplace=False)
+torch.nn.Softmax(dim=None)
+torch.nn.Softmax2d()
 ```
 **Basic two layer feed forward neural networks with optimizer, loss:**
 ```Python
@@ -91,10 +133,89 @@ for t in range(epoch):
     loss.backward() # backward pass
     optimizer.step() # update the weights
 ``` 
- ### What is torchvision?
- 
- #### Datasets:
-
+ ### Fast Torchvision Tutorial
+"The torchvision package consists of popular datasets, model architectures, and common image transformations for computer vision."
+**ImageFolder:** If you have special/custom datasets, image folder function can be used.
+```Python
+# Example
+imagenet_data = torchvision.datasets.ImageFolder('path/to/imagenet_root/')
+data_loader = torch.utils.data.DataLoader(imagenet_data,
+                                          batch_size=4,
+                                          shuffle=True,
+                                          num_workers=args.nThreads)
+ ``` 
+**Transforms:** Transforms are common for image transformations. [Details](https://pytorch.org/docs/stable/torchvision/transforms.html)
+```Python
+# Some of the important functions:
+from torchvision import datasets, transforms
+transform = transforms.Compose([transforms.Resize((input_size, input_size)), transforms.ToTensor(), transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))]) 3 Example
+torchvision.transforms.CenterCrop(size)
+torchvision.transforms.ColorJitter(brightness=0, contrast=0, saturation=0, hue=0)
+torchvision.transforms.Grayscale(num_output_channels=1)
+torchvision.transforms.Pad(padding, fill=0, padding_mode='constant')
+torchvision.transforms.RandomApply(transforms, p=0.5)
+torchvision.transforms.RandomCrop(size, padding=None, pad_if_needed=False, fill=0, padding_mode='constant')
+torchvision.transforms.RandomGrayscale(p=0.1)
+torchvision.transforms.RandomResizedCrop(size, scale=(0.08, 1.0), ratio=(0.75, 1.3333333333333333), interpolation=2)
+torchvision.transforms.RandomRotation(degrees, resample=False, expand=False, center=None)
+torchvision.transforms.RandomVerticalFlip(p=0.5)
+torchvision.transforms.Resize(size, interpolation=2)
+torchvision.transforms.Scale(*args, **kwargs)
+torchvision.transforms.LinearTransformation(transformation_matrix)
+torchvision.transforms.Normalize(mean, std, inplace=False) # Normalize a tensor image with mean and standard deviation. 
+torchvision.transforms.ToTensor() # Convert a PIL Image or numpy.ndarray to tensor
+# Functional transforms give you fine-grained control of the transformation pipeline. As opposed to the transformations above, functional transforms don’t contain a random number generator for their parameters. That means you have to specify/generate all parameters, but you can reuse the functional transform.
+torchvision.transforms.functional.adjust_brightness(img, brightness_factor)
+torchvision.transforms.functional.hflip(img)
+torchvision.transforms.functional.normalize(tensor, mean, std, inplace=False) # Normalize a tensor image with mean and standard deviation
+torchvision.transforms.functional.pad(img, padding, fill=0, padding_mode='constant')
+torchvision.transforms.functional.rotate(img, angle, resample=False, expand=False, center=None) # Rotate the image by angle
+torchvision.transforms.functional.to_grayscale(img, num_output_channels=1) # Convert image to grayscale version of image.
+```
+**Datasets:**: Most used datasets in the literature. [Details](https://pytorch.org/docs/stable/torchvision/datasets.html)
+```Python
+torchvision.datasets.MNIST(root='data/mnist', train=True, transform=transform, target_transform=None, download=True) # with example
+torchvision.datasets.FashionMNIST(root='data/fashion-mnist', train=True, transform=transform, target_transform=None, download=True) # with example
+torchvision.datasets.KMNIST(root, train=True, transform=None, target_transform=None, download=False)
+torchvision.datasets.EMNIST(root, split, **kwargs)
+torchvision.datasets.FakeData(size=1000, image_size=(3, 224, 224), num_classes=10, transform=None, target_transform=None, random_offset=0)
+torchvision.datasets.CocoCaptions(root, annFile, transform=None, target_transform=None)
+torchvision.datasets.CocoDetection(root, annFile, transform=None, target_transform=None)
+torchvision.datasets.LSUN(root, classes='train', transform=None, target_transform=None)
+torchvision.datasets.CIFAR10(root, train=True, transform=None, target_transform=None, download=False)
+torchvision.datasets.STL10(root, split='train', transform=None, target_transform=None, download=False)
+torchvision.datasets.SVHN(root, split='train', transform=None, target_transform=None, download=False)
+torchvision.datasets.PhotoTour(root, name, train=True, transform=None, download=False)
+torchvision.datasets.SBU(root, transform=None, target_transform=None, download=True)
+torchvision.datasets.Flickr8k(root, ann_file, transform=None, target_transform=None)
+torchvision.datasets.VOCSegmentation(root, year='2012', image_set='train', download=False, transform=None, target_transform=None)
+torchvision.datasets.Cityscapes(root, split='train', mode='fine', target_type='instance', transform=None, target_transform=None)
+```   
+**Models:** [Details](https://pytorch.org/docs/stable/torchvision/models.html)
+```Python
+# model with random weights
+import torchvision.models as models
+resnet18 = models.resnet18()
+alexnet = models.alexnet()
+vgg16 = models.vgg16()
+squeezenet = models.squeezenet1_0()
+densenet = models.densenet161()
+inception = models.inception_v3()
+googlenet = models.googlenet()
+# with pre-trained models
+resnet18 = models.resnet18(pretrained=True)
+alexnet = models.alexnet(pretrained=True)
+squeezenet = models.squeezenet1_0(pretrained=True)
+vgg16 = models.vgg16(pretrained=True)
+densenet = models.densenet161(pretrained=True)
+inception = models.inception_v3(pretrained=True)
+googlenet = models.googlenet(pretrained=True)
+```
+**Utils:**
+```Python
+torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Make a grid of images.
+torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Save a given Tensor into an image file
+```
   ## Pytorch Dynamic Graph
   ## Pytorch PlayGround
   ## Pytorch Cheatsheet
