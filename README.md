@@ -216,27 +216,53 @@ googlenet = models.googlenet(pretrained=True)
 torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Make a grid of images.
 torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Save a given Tensor into an image file
 ```
-  ## Pytorch Dynamic Graph
-  ## Pytorch PlayGround
-  ## Pytorch Cheatsheet
+
+## Pytorch Playground
+
+## Pytorch Cheatsheet
   
-- Pytorch with Google Colab
-- Using Drive
-- Transfer from Github to Colab
+## Pytorch with Google Colab
+- If you want to use drive.google for storage, you have to run the following codes for authentication.
+```Python
+!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
+!add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
+!apt-get update -qq 2>&1 > /dev/null
+!apt-get -y install -qq google-drive-ocamlfuse fuse
+from google.colab import auth
+auth.authenticate_user()
+from oauth2client.client import GoogleCredentials
+creds = GoogleCredentials.get_application_default()
+import getpass
+!google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret} < /dev/null 2>&1 | grep URL
+vcode = getpass.getpass()
+!echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
+```
+- Then, you can use your drive file and reach the codes which is in your drive. 
+```Python
+!mkdir -p drive
+!google-drive-ocamlfuse drive
+import sys
+sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'drive/'
+!ls drive
+```
+### Transfer from Github to Colab
   
-- Pytorch Example Implementations
-- MLP (classification)
-- MLP (regression)
-- CNN, 
-- LSTM, 
-- GRU,
-- Transfer Learning
-- DCGAN, 
-- ChatBot
-- Pytorch Sample Codes
+## Pytorch Example Implementations
+### MLP (classification)
+### MLP (regression)
+### CNN 
+### LSTM
+### GRU,
+### Transfer Learning
+### DCGAN, 
+### ChatBot
+
+## Pytorch Sample Codes
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
   - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
   - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
   - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [[github]](https://github.com/znxlwm/pytorch-generative-model-collections)
   - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
   - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
+
+## References
