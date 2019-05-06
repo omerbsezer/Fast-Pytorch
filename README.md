@@ -223,7 +223,7 @@ torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=Fals
   
 ## Pytorch with Google Colab
 - If you want to use drive.google for storage, you have to run the following codes for authentication.
-```Python
+```Script
 !apt-get install -y -qq software-properties-common python-software-properties module-init-tools
 !add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
 !apt-get update -qq 2>&1 > /dev/null
@@ -238,7 +238,7 @@ vcode = getpass.getpass()
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 ```
 - Then, you can use your drive file and reach the your codes which are in your drive. 
-```Python
+```Script
 !mkdir -p drive
 !google-drive-ocamlfuse drive
 import sys
@@ -246,7 +246,16 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 !ls drive
 ```
 ### Transfer from Github to Colab
-  
+- After authentication, git clone command is also used to clone project.  
+```Script
+!mkdir -p drive
+!google-drive-ocamlfuse drive
+import sys
+sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'drive/'
+%cd 'drive/Colab/'
+!ls
+!git clone https://github.com/znxlwm/pytorch-generative-model-collections.git
+```
 ## Pytorch Example Implementations
 ### MLP (classification)
 ### MLP (regression)
