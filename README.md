@@ -237,7 +237,7 @@ import getpass
 vcode = getpass.getpass()
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 ```
-- Then, you can use your drive file and reach the codes which is in your drive. 
+- Then, you can use your drive file and reach the your codes which are in your drive. 
 ```Python
 !mkdir -p drive
 !google-drive-ocamlfuse drive
