@@ -259,6 +259,26 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 ## Pytorch Example Implementations
 - All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
 ### MLP: 
+- MLP 1 Class BCE Loss: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+
+```Python
+class Model(nn.Module):
+  def __init__(self):
+    super(Model,self).__init__()
+    self.fc1 =torch.nn.Linear(x.shape[1],5)
+    self.fc2 =torch.nn.Linear(5,3)
+    self.fc3 =torch.nn.Linear(3,1)
+    self.sigmoid=torch.nn.Sigmoid()
+    
+  def forward(self,x):
+    out =self.fc1(x)
+    out =self.sigmoid(out)
+    out =self.fc2(out)
+    out =self.sigmoid(out)
+    out =self.fc3(out)
+    out= self.sigmoid(out)
+    return out
+```
 - Code: (Notebook)[]
 ### CNN:
 ### LSTM:
