@@ -24,7 +24,7 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
  
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 
-**Pytorch Playground:** [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+**Pytorch Playground:** [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb) [RunInColab](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
 
 **Model (Neural Network Layers:** [Details](https://pytorch.org/docs/stable/nn.html)
 ```Python
