@@ -3,9 +3,9 @@
 This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
 
 ## Running in Colab
-- Three way:
-   - Clone or download all repo, then upload your drive root file ('/drive/')
-   -
+- Two way:
+   - Clone or download all repo, then upload your drive root file ('/drive/'), open .ipynb files with 'Colaboratory' application
+   - Download "Github2Drive.ipynb" and copy your drive root file, open with 'Colaboratory' and run 3 cells one by one, hence repo is cloned to your drive file. ([Pytorch with Google Colab](#pytorchcolab))
 
 ## Table of Contents:
 - :fire:[Fast Pytorch Tutorial](#pytorchtutorial)
