@@ -3,18 +3,30 @@
 This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
 
 ## Table of Contents:
-- Fast Pytorch Tutorial
-- Fast Torchvision Tutorial
-- Pytorch with Google Colab
-- Pytorch Example Implementations
-  - MLP: 
+- [Fast Pytorch Tutorial](#pytorchtutorial)
+- [Fast Torchvision Tutorial](#torchvisiontutorial)
+- [Pytorch with Google Colab](#pytorchcolab)
+- [Pytorch Example Implementations](#pytorchexamples)
+  - [MLP](#mlp) 
     - MLP 1 Class with Binary Cross Entropy (BCE) Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
     - MLP 2 Classes with Cross Entropy Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
     - MLP 3-Layer with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
-
-- Pytorch Sample Codes
+   - [CNN](#cnn)
+      - CNN with MNIST Example:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
+      - Improved CNN with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
+    - [CNN Visualization](#cnnvisualization)
+      - CNN Visualization:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
+    - [RNN](#rnn)
+      - RNN Text Generation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
+    - [Transfer Learning](#transferlearning)
+      - Transfer Learning Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
+    - [DCGAN](#dcgan)
+      - DCGAN Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
+    - [ChatBot](#chatbot)
+      - Chatbot Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
+- [Pytorch Sample Codes](#pytorchsamplecodes)
   
-## Fast Pytorch Tutorial
+## Fast Pytorch Tutorial <a name="pytorchtutorial"></a>
 
 It's python deep learning framework/library that is developed by Facebook. Pytorch has own datastructure that provides automatic differentiation for all operations on Tensors. 
  - [What is Pytorch?](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
@@ -135,7 +147,7 @@ for t in range(epoch):
     loss.backward() # backward pass
     optimizer.step() # update the weights
 ``` 
- ### Fast Torchvision Tutorial
+ ### Fast Torchvision Tutorial <a name="torchvisiontutorial"></a>
 "The torchvision package consists of popular datasets, model architectures, and common image transformations for computer vision."
 **ImageFolder:** If you have special/custom datasets, image folder function can be used.
 ```Python
@@ -220,7 +232,7 @@ torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=Fals
 ```
 
   
-## Pytorch with Google Colab
+## Pytorch with Google Colab <a name="pytorchcolab"></a>
 - If you want to use drive.google for storage, you have to run the following codes for authentication. After running cell, links for authentication are appereared, click and copy the token pass for that session.
 ```Script
 !apt-get install -y -qq software-properties-common python-software-properties module-init-tools
@@ -255,9 +267,9 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 !ls
 !git clone https://github.com/znxlwm/pytorch-generative-model-collections.git
 ```
-## Pytorch Example Implementations
+## Pytorch Example Implementations <a name="pytorchexamples"></a>
 - All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
-### MLP: 
+### MLP <a name="mlp"></a> 
 - MLP 1 Class with Binary Cross Entropy (BCE) Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
 - MLP 2 Classes with Cross Entropy Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
 - MLP 3-Layer with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
@@ -280,7 +292,7 @@ class Model(nn.Module):
     out= self.sigmoid(out)
     return out
 ```
-### CNN:
+### CNN <a name="cnn"></a>
 - CNN with MNIST Example:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
 - Improved CNN with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
 
@@ -321,12 +333,12 @@ class CNN(nn.Module):
     out =self.fc2(out)
     return out
 ```    
-### CNN Visualization:
+### CNN Visualization <a name="cnnvisualization"></a>
 - CNN Visualization:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
 
 ![visualization-CNN-runtime](https://user-images.githubusercontent.com/10358317/57305262-6d99d600-70e9-11e9-9a8f-7f9ea0f69dc3.png)
 
-### RNN:
+### RNN <a name="rnn"></a>
 - RNN Text Generation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
 
 ```Python
@@ -349,21 +361,19 @@ class TextGenerator(nn.Module):
     out= self.linear(out)
     return out, (h,c)
 ```   
-### Transfer Learning:
+### Transfer Learning <a name="transferlearning"></a>
 
 - Transfer Learning Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
 
 ![transferlearning](https://user-images.githubusercontent.com/10358317/57308748-8efdc080-70ef-11e9-8bca-68d672d5dde6.jpg)
 
-### DCGAN:
+### DCGAN <a name="dcgan"></a>
 
 - DCGAN Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
 
-![dcgan_generator](https://user-images.githubusercontent.com/10358317/57308884-c66c6d00-70ef-11e9-8bb4-356569ee9d99.png)
-
 ![dcgan](https://user-images.githubusercontent.com/10358317/57308734-8ad1a300-70ef-11e9-830e-8a8b04d7b00d.png)
 
-### ChatBot:
+### ChatBot <a name="chatbot"></a>
 - Chatbot Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
 - Chatbot implementation [details](https://pytorch.org/tutorials/beginner/chatbot_tutorial.html).
 
@@ -408,7 +418,7 @@ Bot: the sheets . . .
 Bot: i don t know .
 ``` 
 
-## Pytorch Sample Codes
+## Pytorch Sample Codes <a name="pytorchsamplecodes"></a>
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
   - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
   - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
@@ -416,6 +426,6 @@ Bot: i don t know .
   - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
   - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
 
-## References
+## References <a name="references"></a>
 
 - [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
