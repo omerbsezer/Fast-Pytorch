@@ -21,22 +21,22 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 - [Pytorch with Google Colab](#pytorchcolab)
 - [Pytorch Example Implementations](#pytorchexamples)
   - [MLP](#mlp) 
-    - MLP 1 Class with Binary Cross Entropy (BCE) Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
-    - MLP 2 Classes with Cross Entropy Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
-    - MLP 3-Layer with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
+    - MLP 1 Class with Binary Cross Entropy (BCE) Loss: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+    - MLP 2 Classes with Cross Entropy Loss: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
+    - MLP 3-Layer with MNIST Example: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
    - [CNN](#cnn)
-      - CNN with MNIST Example:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
-      - Improved CNN with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
+      - CNN with MNIST Example:  :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
+      - Improved CNN with MNIST Example: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
     - [CNN Visualization](#cnnvisualization)
-      - CNN Visualization:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
+      - CNN Visualization:  :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
     - [RNN](#rnn)
-      - RNN Text Generation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
+      - RNN Text Generation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
     - [Transfer Learning](#transferlearning)
-      - Transfer Learning Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
+      - Transfer Learning Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
     - [DCGAN](#dcgan)
-      - DCGAN Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
+      - DCGAN Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
     - [ChatBot](#chatbot)
-      - Chatbot Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
+      - Chatbot Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
 - [Pytorch Sample Codes](#pytorchsamplecodes)
   
 ## Fast Pytorch Tutorial <a name="pytorchtutorial"></a>
@@ -51,7 +51,7 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
 **Pytorch CheatSheet:** [Details](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
 ### Pytorch Playground <a name="pytorchplayground"></a>
-- [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+- :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
 
 ### Model (Neural Network Layers) <a name="model"></a>
 - [Details](https://pytorch.org/docs/stable/nn.html)
@@ -294,9 +294,9 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 ## Pytorch Example Implementations <a name="pytorchexamples"></a>
 - All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
 ### MLP <a name="mlp"></a> 
-- MLP 1 Class with Binary Cross Entropy (BCE) Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
-- MLP 2 Classes with Cross Entropy Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
-- MLP 3-Layer with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
+- MLP 1 Class with Binary Cross Entropy (BCE) Loss: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+- MLP 2 Classes with Cross Entropy Loss: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
+- MLP 3-Layer with MNIST Example: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
 
 ```Python
 class Model(nn.Module):
@@ -317,8 +317,8 @@ class Model(nn.Module):
     return out
 ```
 ### CNN <a name="cnn"></a>
-- CNN with MNIST Example:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
-- Improved CNN with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
+- CNN with MNIST Example:  :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
+- Improved CNN with MNIST Example: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
 
 ```Python
 class CNN(nn.Module):
@@ -358,12 +358,12 @@ class CNN(nn.Module):
     return out
 ```    
 ### CNN Visualization <a name="cnnvisualization"></a>
-- CNN Visualization:  [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
+- CNN Visualization:  :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
 
 ![visualization-CNN-runtime](https://user-images.githubusercontent.com/10358317/57305262-6d99d600-70e9-11e9-9a8f-7f9ea0f69dc3.png)
 
 ### RNN <a name="rnn"></a>
-- RNN Text Generation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
+- RNN Text Generation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
 
 ```Python
 class TextGenerator(nn.Module):
@@ -387,18 +387,18 @@ class TextGenerator(nn.Module):
 ```   
 ### Transfer Learning <a name="transferlearning"></a>
 
-- Transfer Learning Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
+- Transfer Learning Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
 
 ![transferlearning](https://user-images.githubusercontent.com/10358317/57308748-8efdc080-70ef-11e9-8bca-68d672d5dde6.jpg)
 
 ### DCGAN <a name="dcgan"></a>
 
-- DCGAN Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
+- DCGAN Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
 
 ![dcgan](https://user-images.githubusercontent.com/10358317/57308734-8ad1a300-70ef-11e9-830e-8a8b04d7b00d.png)
 
 ### ChatBot <a name="chatbot"></a>
-- Chatbot Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
+- Chatbot Implementation: :green_book:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), :notebook:[[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
 - Chatbot implementation [details](https://pytorch.org/tutorials/beginner/chatbot_tutorial.html).
 
 ```Script
