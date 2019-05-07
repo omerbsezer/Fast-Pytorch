@@ -2,6 +2,11 @@
 
 This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
 
+## Running in Colab
+- Three way:
+   - Clone or download all repo, then upload your drive root file ('/drive/')
+   -
+
 ## Table of Contents:
 - :fire:[Fast Pytorch Tutorial](#pytorchtutorial)
   - [Pytorch Playground](#pytorchplayground)
@@ -277,7 +282,7 @@ vcode = getpass.getpass()
 !mkdir -p drive
 !google-drive-ocamlfuse drive
 import sys
-sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'drive/'
+sys.path.insert(0,'drive/Fast-Pytorch/Learning_Pytorch') # Example, your drive root: 'drive/'
 !ls drive
 ```
 ### Transfer from Github to Colab
@@ -286,10 +291,10 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 !mkdir -p drive
 !google-drive-ocamlfuse drive
 import sys
-sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'drive/'
-%cd 'drive/Colab/'
+sys.path.insert(0,'drive/Fast-Pytorch/Learning_Pytorch') # Example, your drive root: 'drive/'
+%cd 'drive/'
 !ls
-!git clone https://github.com/znxlwm/pytorch-generative-model-collections.git
+!git clone https://github.com/omerbsezer/Fast-Pytorch.git
 ```
 ## Pytorch Example Implementations <a name="pytorchexamples"></a>
 - All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
