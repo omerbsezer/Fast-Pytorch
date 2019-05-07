@@ -1,6 +1,6 @@
 # Fast-Pytorch
 
-This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab in a nutshell.
+This repo aims to cover Pytorch details, Pytorch example implementations, Pytorch sample codes, running Pytorch codes with Google Colab (with K80 GPU/CPU) in a nutshell. 
 
 ## Running in Colab
 - Two way:
