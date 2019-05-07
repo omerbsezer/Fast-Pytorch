@@ -7,13 +7,12 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 - Fast Torchvision Tutorial
 - Pytorch with Google Colab
 - Pytorch Example Implementations
+  - MLP: 
+    - MLP 1 Class with Binary Cross Entropy (BCE) Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+    - MLP 2 Classes with Cross Entropy Loss: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
+    - MLP 3-Layer with MNIST Example: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
+
 - Pytorch Sample Codes
-  - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
-  - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
-  - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
-  - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [[github]](https://github.com/znxlwm/pytorch-generative-model-collections)
-  - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
-  - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
   
 ## Fast Pytorch Tutorial
 
@@ -25,6 +24,8 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 
 **Pytorch Playground:** [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+
+**Pytorch CheatSheet:** [Details](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
 **Model (Neural Network Layers:** [Details](https://pytorch.org/docs/stable/nn.html)
 ```Python
@@ -218,7 +219,6 @@ torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=No
 torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Save a given Tensor into an image file
 ```
 
-## Pytorch Cheatsheet
   
 ## Pytorch with Google Colab
 - If you want to use drive.google for storage, you have to run the following codes for authentication. After running cell, links for authentication are appereared, click and copy the token pass for that session.
@@ -353,9 +353,15 @@ class TextGenerator(nn.Module):
 
 - Transfer Learning Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
 
+![transferlearning](https://user-images.githubusercontent.com/10358317/57308748-8efdc080-70ef-11e9-8bca-68d672d5dde6.jpg)
+
 ### DCGAN:
 
 - DCGAN Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb),  [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
+
+![dcgan_generator](https://user-images.githubusercontent.com/10358317/57308884-c66c6d00-70ef-11e9-8bb4-356569ee9d99.png)
+
+![dcgan](https://user-images.githubusercontent.com/10358317/57308734-8ad1a300-70ef-11e9-830e-8a8b04d7b00d.png)
 
 ### ChatBot:
 - Chatbot Implementation: [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
