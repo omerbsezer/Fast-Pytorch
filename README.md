@@ -259,7 +259,9 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 ## Pytorch Example Implementations
 - All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
 ### MLP: 
-- MLP 1 Class BCE Loss: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+- MLP 1 Class with Binary Cross Entropy (BCE) Loss: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_1class_BinaryCrossEntropyLoss.ipynb) 
+- MLP 2 Classes with Cross Entropy Loss: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_2class_CrossEntropyLoss.ipynb)
+- MLP 3-Layer with MNIST Example: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/MLP_3layer_MNIST.ipynb)
 
 ```Python
 class Model(nn.Module):
@@ -279,8 +281,51 @@ class Model(nn.Module):
     out= self.sigmoid(out)
     return out
 ```
-- Code: (Notebook)[]
 ### CNN:
+- CNN with MNIST Example: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
+- Improved CNN with MNIST Example: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
+
+
+```Python
+class CNN(nn.Module):
+  def __init__(self):
+    super(CNN,self).__init__()
+    # input_size:28, same_padding=(filter_size-1)/2, 3-1/2=1:padding
+    self.cnn1=nn.Conv2d(in_channels=1, out_channels=8, kernel_size=3, stride=1, padding=1)
+    # input_size-filter_size +2(padding)/stride + 1 = 28-3+2(1)/1+1=28
+    self.batchnorm1=nn.BatchNorm2d(8)
+    # output_channel:8, batch(8)
+    self.relu=nn.ReLU()
+    self.maxpool1=nn.MaxPool2d(kernel_size=2)
+    #input_size=28/2=14
+    self.cnn2=nn.Conv2d(in_channels=8, out_channels=32, kernel_size=5, stride=1, padding=2)
+    # same_padding: (5-1)/2=2:padding_size. 
+    self.batchnorm2=nn.BatchNorm2d(32)
+    self.maxpool2=nn.MaxPool2d(kernel_size=2)
+    # input_size=14/2=7
+    # 32x7x7=1568
+    self.fc1 =nn.Linear(in_features=1568, out_features=600)
+    self.dropout= nn.Dropout(p=0.5)
+    self.fc2 =nn.Linear(in_features=600, out_features=10)
+  def forward(self,x):
+    out =self.cnn1(x)
+    out =self.batchnorm1(out)
+    out =self.relu(out)
+    out =self.maxpool1(out)
+    out =self.cnn2(out)
+    out =self.batchnorm2(out)
+    out =self.relu(out)
+    out =self.maxpool2(out)
+    out =out.view(-1,1568)
+    out =self.fc1(out)
+    out =self.relu(out)
+    out =self.dropout(out)
+    out =self.fc2(out)
+    return out
+```    
+### CNN Visualization:
+
+CNN VisuNotebookhttps://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb
 ### LSTM:
 ### GRU:
 ### Transfer Learning:
