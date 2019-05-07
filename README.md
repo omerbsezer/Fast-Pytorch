@@ -285,14 +285,9 @@ import sys
 sys.path.insert(0,'drive/Fast-Pytorch/Learning_Pytorch') # Example, your drive root: 'drive/'
 !ls drive
 ```
-### Transfer from Github to Colab
 - After authentication, git clone command is also used to clone project.  
 ```Script
-!mkdir -p drive
-!google-drive-ocamlfuse drive
-import sys
-sys.path.insert(0,'drive/Fast-Pytorch/Learning_Pytorch') # Example, your drive root: 'drive/'
-%cd 'drive/'
+%cd 'drive/Fast-Pytorch'
 !ls
 !git clone https://github.com/omerbsezer/Fast-Pytorch.git
 ```
@@ -450,11 +445,12 @@ Bot: i don t know .
 ## Pytorch Sample Codes <a name="pytorchsamplecodes"></a>
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
   - [Project] A simple PyTorch Implementation of Generative Adversarial Networks, focusing on anime face drawing, [[github]](https://github.com/jayleicn/animeGAN)
-  - wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
+  - Wiseodd/generative-models, both pytorch and tensorflow [[github]](https://github.com/wiseodd/generative-models)
   - GAN, LSGAN, WGAN, DRAGAN, CGAN, infoGAN, ACGAN, EBGAN, BEGAN [[github]](https://github.com/znxlwm/pytorch-generative-model-collections)
   - CartoonGAN [github](https://github.com/znxlwm/pytorch-CartoonGAN)
-  - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
+  - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix)
 
 ## References <a name="references"></a>
 
 - [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
+- [Udemy Course: the-complete-neural-networks-bootcamp-theory-applications](https://www.udemy.com/the-complete-neural-networks-bootcamp-theory-applications/)
