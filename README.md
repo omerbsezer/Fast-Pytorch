@@ -5,7 +5,7 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 ## Table of Contents:
 - [Fast Pytorch Tutorial](#pytorchtutorial)
   - [Pytorch Playground](#pytorchplayground)
-    - [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+    - :sun_with_face:[[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
   - [Model (Neural Network Layers)](#model)
   - [Optimizer](#optimizer)
   - [Loss Functions](#lossfunctions)
