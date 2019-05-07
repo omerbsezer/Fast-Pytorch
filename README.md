@@ -222,7 +222,7 @@ torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=Fals
 ## Pytorch Cheatsheet
   
 ## Pytorch with Google Colab
-- If you want to use drive.google for storage, you have to run the following codes for authentication.
+- If you want to use drive.google for storage, you have to run the following codes for authentication. After running cell, links for authentication are appereared, click and copy the token pass for that session.
 ```Script
 !apt-get install -y -qq software-properties-common python-software-properties module-init-tools
 !add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
@@ -257,14 +257,15 @@ sys.path.insert(0,'drive/Colab/Learning_Pytorch') # Example, your drive root: 'd
 !git clone https://github.com/znxlwm/pytorch-generative-model-collections.git
 ```
 ## Pytorch Example Implementations
-### MLP (classification)
-### MLP (regression)
-### CNN 
-### LSTM
-### GRU,
-### Transfer Learning
-### DCGAN, 
-### ChatBot
+- All codes are run on the Colab. You can also run on desktop jupyter notebooks.(Anaconda)[https://www.anaconda.com/distribution/].
+### MLP: 
+- Code: (Notebook)[]
+### CNN:
+### LSTM:
+### GRU:
+### Transfer Learning:
+### DCGAN:
+### ChatBot:
 
 ## Pytorch Sample Codes
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
