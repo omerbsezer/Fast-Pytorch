@@ -4,7 +4,20 @@ This repo aims to cover Pytorch details, Pytorch example implementations, Pytorc
 
 ## Table of Contents:
 - [Fast Pytorch Tutorial](#pytorchtutorial)
+  - [Pytorch Playground](#pytorchplayground)
+    - [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+  - [Model (Neural Network Layers)](#model)
+  - [Optimizer](#optimizer)
+  - [Loss Functions](#lossfunctions)
+  - [Pooling Layers](#poolinglayers)
+  - [Non-linear activation functions](#nonlinearactivation)
+  - [Basic 2 Layer NN](#example)
 - [Fast Torchvision Tutorial](#torchvisiontutorial)
+  - [ImageFolder](#imagefolder)
+  - [Transforms](#transforms)
+  - [Datasets](#datasets)
+  - [Models](#torchvisionmodels)
+  - [Utils](#utils)
 - [Pytorch with Google Colab](#pytorchcolab)
 - [Pytorch Example Implementations](#pytorchexamples)
   - [MLP](#mlp) 
@@ -35,11 +48,13 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
  
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
 
-**Pytorch Playground:** [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
-
 **Pytorch CheatSheet:** [Details](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
-**Model (Neural Network Layers:** [Details](https://pytorch.org/docs/stable/nn.html)
+### Pytorch Playground <a name="pytorchplayground"></a>
+- [[Colab]](https://colab.research.google.com/github/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb), [[Notebook]](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
+
+### Model (Neural Network Layers) <a name="model"></a>
+- [Details](https://pytorch.org/docs/stable/nn.html)
 ```Python
 torch.nn.RNN(*args, **kwargs)
 torch.nn.LSTM(*args, **kwargs)
@@ -58,7 +73,8 @@ torch.nn.ConvTranspose3d(in_channels, out_channels, kernel_size, stride=1, paddi
 torch.nn.Unfold(kernel_size, dilation=1, padding=0, stride=1)
 torch.nn.Fold(output_size, kernel_size, dilation=1, padding=0, stride=1)
 ```
-**Optimizer:**  [Details](https://pytorch.org/docs/stable/optim.html)
+### Optimizer <a name="optimizer"></a>
+- [Details](https://pytorch.org/docs/stable/optim.html)
 ```Python
 torch.optim.Adadelta(params, lr=1.0, rho=0.9, eps=1e-06, weight_decay=0)
 torch.optim.Adagrad(params, lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
@@ -73,7 +89,8 @@ torch.optim.SGD(params, lr=<required parameter>, momentum=0, dampening=0, weight
 torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda, last_epoch=-1)
 torch.optim.lr_scheduler.StepLR(optimizer, step_size, gamma=0.1, last_epoch=-1)
 ```
-**Loss Functions:** [Details](https://pytorch.org/docs/stable/nn.html#loss-functions)
+### Loss Functions <a name="lossfunctions"></a>
+- [Details](https://pytorch.org/docs/stable/nn.html#loss-functions)
 ```Python
 torch.nn.L1Loss(size_average=None, reduce=None, reduction='mean') # L1 Loss
 torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean') # Mean square error loss
@@ -85,7 +102,8 @@ torch.nn.KLDivLoss(size_average=None, reduce=None, reduction='mean') # Kullback-
 torch.nn.BCELoss(weight=None, size_average=None, reduce=None, reduction='mean') # Binary Cross Entropy
 torch.nn.MarginRankingLoss(margin=0.0, size_average=None, reduce=None, reduction='mean')
 ```
-**Pooling Layers:** [Details](https://pytorch.org/docs/stable/nn.html#pooling-layers)
+### Pooling Layers <a name="poolinglayers"></a>
+- [Details](https://pytorch.org/docs/stable/nn.html#pooling-layers)
 ```Python
 torch.nn.MaxPool1d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)
 torch.nn.MaxPool2d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)
@@ -97,7 +115,8 @@ torch.nn.LPPool2d(norm_type, kernel_size, stride=None, ceil_mode=False) # 2D pow
 torch.nn.AdaptiveMaxPool2d(output_size, return_indices=False)
 torch.nn.AdaptiveAvgPool2d(output_size)
 ```
-**Non-linear activation functions:** [Details](https://pytorch.org/docs/stable/nn.html#non-linear-activation-functions)
+### Non-linear activation functions <a name="nonlinearactivation"></a>
+- [Details](https://pytorch.org/docs/stable/nn.html#non-linear-activation-functions)
 ```Python
 torch.nn.ELU(alpha=1.0, inplace=False) #  the element-wise function
 torch.nn.Hardshrink(lambd=0.5) #  hard shrinkage function element-wise
@@ -116,7 +135,8 @@ torch.nn.Threshold(threshold, value, inplace=False)
 torch.nn.Softmax(dim=None)
 torch.nn.Softmax2d()
 ```
-**Basic two layer feed forward neural networks with optimizer, loss:**
+### Basic 2 Layer NN <a name="example"></a>
+- Basic two layer feed forward neural networks with optimizer, loss:
 ```Python
 import torch
 class TwoLayerNet(torch.nn.Module):
@@ -149,7 +169,8 @@ for t in range(epoch):
 ``` 
  ### Fast Torchvision Tutorial <a name="torchvisiontutorial"></a>
 "The torchvision package consists of popular datasets, model architectures, and common image transformations for computer vision."
-**ImageFolder:** If you have special/custom datasets, image folder function can be used.
+### ImageFolder <a name="imagefolder"></a>
+- If you have special/custom datasets, image folder function can be used.
 ```Python
 # Example
 imagenet_data = torchvision.datasets.ImageFolder('path/to/imagenet_root/')
@@ -158,7 +179,8 @@ data_loader = torch.utils.data.DataLoader(imagenet_data,
                                           shuffle=True,
                                           num_workers=args.nThreads)
  ``` 
-**Transforms:** Transforms are common for image transformations. [Details](https://pytorch.org/docs/stable/torchvision/transforms.html)
+### Transforms <a name="transforms"></a>
+- Transforms are common for image transformations. [Details](https://pytorch.org/docs/stable/torchvision/transforms.html)
 ```Python
 # Some of the important functions:
 from torchvision import datasets, transforms
@@ -186,7 +208,8 @@ torchvision.transforms.functional.pad(img, padding, fill=0, padding_mode='consta
 torchvision.transforms.functional.rotate(img, angle, resample=False, expand=False, center=None) # Rotate the image by angle
 torchvision.transforms.functional.to_grayscale(img, num_output_channels=1) # Convert image to grayscale version of image.
 ```
-**Datasets:**: Most used datasets in the literature. [Details](https://pytorch.org/docs/stable/torchvision/datasets.html)
+### Datasets <a name="datasets"></a>
+- Most used datasets in the literature. [Details](https://pytorch.org/docs/stable/torchvision/datasets.html)
 ```Python
 torchvision.datasets.MNIST(root='data/mnist', train=True, transform=transform, target_transform=None, download=True) # with example
 torchvision.datasets.FashionMNIST(root='data/fashion-mnist', train=True, transform=transform, target_transform=None, download=True) # with example
@@ -205,7 +228,8 @@ torchvision.datasets.Flickr8k(root, ann_file, transform=None, target_transform=N
 torchvision.datasets.VOCSegmentation(root, year='2012', image_set='train', download=False, transform=None, target_transform=None)
 torchvision.datasets.Cityscapes(root, split='train', mode='fine', target_type='instance', transform=None, target_transform=None)
 ```   
-**Models:** [Details](https://pytorch.org/docs/stable/torchvision/models.html)
+### Models <a name="torchvisionmodels"></a>
+- [Details](https://pytorch.org/docs/stable/torchvision/models.html)
 ```Python
 # model with random weights
 import torchvision.models as models
@@ -225,7 +249,7 @@ densenet = models.densenet161(pretrained=True)
 inception = models.inception_v3(pretrained=True)
 googlenet = models.googlenet(pretrained=True)
 ```
-**Utils:**
+### Utils <a name="utils"></a>
 ```Python
 torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Make a grid of images.
 torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Save a given Tensor into an image file
