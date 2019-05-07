@@ -23,7 +23,8 @@ It's python deep learning framework/library that is developed by Facebook. Pytor
  - [Details - Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
  
 **Important keys:** torch.Tensor, .requires_grad, .backward(), .grad, with torch.no_grad().
-- Pytorch Playground: [Notebook]
+
+**Pytorch Playground:** [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Pytorch_Playground.ipynb)
 
 **Model (Neural Network Layers:** [Details](https://pytorch.org/docs/stable/nn.html)
 ```Python
@@ -217,8 +218,6 @@ torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=No
 torchvision.utils.save_image(tensor, filename, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0) # Save a given Tensor into an image file
 ```
 
-## Pytorch Playground
-
 ## Pytorch Cheatsheet
   
 ## Pytorch with Google Colab
@@ -285,7 +284,6 @@ class Model(nn.Module):
 - CNN with MNIST Example: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Mnist.ipynb)
 - Improved CNN with MNIST Example: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/Improved_CNN_Mnist.ipynb)
 
-
 ```Python
 class CNN(nn.Module):
   def __init__(self):
@@ -324,13 +322,85 @@ class CNN(nn.Module):
     return out
 ```    
 ### CNN Visualization:
+- CNN Visualization: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb)
 
-CNN VisuNotebookhttps://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/CNN_Visualization.ipynb
-### LSTM:
-### GRU:
+![visualization-CNN-runtime](https://user-images.githubusercontent.com/10358317/57305262-6d99d600-70e9-11e9-9a8f-7f9ea0f69dc3.png)
+
+### RNN:
+- RNN Text Generation: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/RNN_word_embeddings.ipynb)
+
+```Python
+class TextGenerator(nn.Module):
+  def __init__(self, vocab_size, embed_size, hidden_size, num_layers):
+    super(TextGenerator, self).__init__()
+    self.embed= nn.Embedding(vocab_size,embed_size)
+    self.lstm=nn.LSTM(embed_size,hidden_size,num_layers, batch_first=True)
+    self.linear=nn.Linear(hidden_size, vocab_size)
+    
+  def forward(self,x,h):
+    x= self.embed(x)
+    # h: hidden_state, c=output
+    # x= x.view(batch_size,timesteps,embed_size)
+    out, (h,c)=self.lstm(x,h)
+    #(batch_size*timesteps, hidden_size)
+    #out.size(0):batch_size; out.size(1):timesteps, out.size(2): hidden_size
+    out=out.reshape(out.size(0)*out.size(1),out.size(2))
+    # decode hidden states of all time steps
+    out= self.linear(out)
+    return out, (h,c)
+```   
 ### Transfer Learning:
+
+- Transfer Learning Implementation: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/TransferLearning.ipynb)
+
 ### DCGAN:
+
+- DCGAN Implementation: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/DCGAN.ipynb)
+
 ### ChatBot:
+- Chatbot Implementation: [Notebook](https://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_Pytorch/ChatBot.ipynb)
+- Chatbot implementation [details](https://pytorch.org/tutorials/beginner/chatbot_tutorial.html).
+
+```Script
+> what is your name?
+Bot: berger .
+> are you married?
+Bot: no .
+> how old are you?
+Bot: i m not hungry .
+> how are you?
+Bot: okay .
+> where are you from?
+Bot: i m travelling .
+> do you know me?
+Bot: yes .
+> who am i?
+Bot: i don t know .
+> what is your job?
+Bot: i m not going to tell you .
+> what is your problem?
+Bot: i m not afraid of anything .
+> are you robot?
+Error: Encountered unknown word.
+> what is my name?
+Bot: berger .
+> ai?
+Error: Encountered unknown word.
+> what do you want to me?
+Bot: i m going to kill you .
+> how do you kill me?
+Bot: i told you .
+> what is your plan?
+Bot: i m not going to tell you .
+> are you live?
+Bot: yes .
+> where?
+Bot: the zoo .
+> what is zoo?
+Bot: the sheets . . .
+> where is the zoo?
+Bot: i don t know .
+``` 
 
 ## Pytorch Sample Codes
   - CycleGAN [[github]](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [[github2]](https://github.com/znxlwm/pytorch-CycleGAN)
@@ -341,3 +411,5 @@ CNN VisuNotebookhttps://github.com/omerbsezer/Fast-Pytorch/blob/master/Learning_
   - Pix2Pix [[github]](https://github.com/znxlwm/pytorch-pix2pix), [[paper]]()
 
 ## References
+
+- [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
